@@ -22,11 +22,11 @@ int main()
     cout << *T << endl;
     cout << t[1] <<endl;
 
-    static int s_i = 5;
-    static int* s_p = &s_i;
+    const int s_i = 5;
+    const int* s_p = &s_i;
     cout << *s_p << endl;
 
     int I = 10;
-    int static *static_p = &I;
+    int const *static_p = &I;
     cout << *static_p << endl;
 }
