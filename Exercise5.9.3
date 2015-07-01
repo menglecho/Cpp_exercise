@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    typedef unsigned char un_ch;
+    un_ch char1 = 'M';
+    cout << char1 << endl;
+
+    const unsigned char char2 = 'i';
+    typedef const unsigned char co_un_ch;
+    co_un_ch char3 = 'y';
+    cout << char2 << endl;
+    cout << char3 << endl;
+
+    int x = 5;
+    typedef int *int_p;
+    int_p p1 = &x;
+    cout << *p1 << endl;
+
+    typedef char **char_p;
+    char charC = 'L';
+    char *p = &charC;
+    char_p p2 = &p;//point to char is a string
+    cout << **p2 << endl;
+    cout << *p2[0] << endl;//
+
+    typedef int *char_intP;
+    int x_char[] = {'a','b','c',8};
+    char_intP intP = x_char;
+    cout << intP[1] << endl;
+
+    typedef int *intPo;
+    int x_int[7] = {3,5,2,1,6,7,9};
+    intPo intpo = x_int;
+    cout << intpo[0] << endl;
+}
