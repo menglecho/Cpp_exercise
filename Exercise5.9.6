@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+char f(char x1)
+{
+    cout << x1 << endl;
+}
+
+char g(char& x2)
+{
+    cout << x2 << endl;
+}
+
+char h(const char& x3)
+{
+    cout << x3 << endl;
+}
+int main()
+{
+    const char cc = 'a';
+    int a = 49;
+    int b = 3300;
+    char cc1 = 'c';
+    unsigned char uc = 'uc';
+    signed char sc = 'sc';
+
+    f(cc1);
+    g(cc1);
+    h(cc);
+}
