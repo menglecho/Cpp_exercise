@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int changeValuebypoint(int* x, int* y)
+{
+    int* tmp = 0;
+    tmp = x;
+    x = y;
+    y = tmp;
+    cout << *x << endl;
+    cout << *y << endl;
+}
+
+int changeValuebyreference(int& k, int& d)
+{
+    int tmp2 = 0;
+    tmp2 = k;
+    k = d;
+    d = tmp2;
+    cout << k << endl;
+    cout << d << endl;
+}
+int main()
+{
+    int x = 3;
+    int y = 5;
+    int* p1 = &x;
+    int* p2 = &y;
+    changeValuebypoint(p1, p2);
+    changeValuebyreference(x, y);
+    return 0;
+}
