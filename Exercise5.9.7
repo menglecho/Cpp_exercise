@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+struct Table{
+    string monthS;
+    int dayS;
+};
+
+void printTable(struct Table table)
+{
+    cout << "Month" << " " << table.monthS <<endl;
+    cout << "Day" << " " <<table.dayS <<endl;
+
+}
+
+int main()
+{
+    string month[] = {"Jan","Feb","Mar","Apr","May"};
+    int day[] = {31,29,31,30,31};
+
+    for(int m = 0; m < 5; m++)
+    {
+        cout << month[m] <<" "<< day[m] << endl;
+    }
+
+    struct Table table1;
+    table1.monthS= "Jan";
+    table1.dayS = 31;
+    printTable(table1);
+}
